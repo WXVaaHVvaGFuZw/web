@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" />
+  <link rel="stylesheet" href="CSS/glide.core.min.css" />
+  <link rel="stylesheet" href="CSS/glide.theme.min.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="icon" href="IMG\cow.png">
+  <title>基于地区差异的畜牧业碳排放量仿真和预测</title>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header class="open">
+    <div class="logo">
+      
+    </div>
+    <!-- 导航 -->
+    <nav>
+      <a href="#home">首页</a>
+      <a href="#research-status">研究现状</a>
+      <a href="#project-context">项目背景</a>
+      <a href="#purpose">研究目的</a>
+      <a href="#research-process">研究过程</a>
+      <a href="#value">实际价值</a>
+      <a href="#policy-suggestion">政策建议</a>
+      <a href="HTML/sheet.html">数据</a>
+    </nav>
+    <!-- 折叠导航按钮 -->
+    <div class="burger">
+      <div class="burger-line1"></div>
+      <div class="burger-line2"></div>
+      <div class="burger-line3"></div>
+    </div>
+  </header>
+  <!-- 首页图片轮播，使用glide JS插件 -->
+  <div class="glide" id="home">
+    <!-- 轮播轨道 -->
+    <div class="glide__track" data-glide-el="track">
+      <!-- 所有轮播容器 -->
+      <div class="glide__slides">
+        <!-- 单个轮播组件 -->
+        <div class="glide__slide">
+          <!-- 轮播标题 -->
+          <div class="slide-caption">
+            <h1>发展现代畜牧业 促农增收又致富</h1>
+            <h3>
+              基于地区差异的畜牧业碳排放量仿真和预测
+            </h3>
+            <!-- 探索按钮 -->
+            <button class="explore-btn">探索更多</button>
+          </div>
+          <!-- 背景遮罩 -->
+          <div class="backdrop"></div>
+          <!-- 轮播图片 -->
+          <img src="IMG\background1.png" alt="" />
+        </div>
+        <!-- 第二张轮播 -->
+        <div class="glide__slide">
+          <!-- 轮播标题 -->
+          <div class="slide-caption">
+            <h1>发展现代畜牧业 促农增收又致富</h1>
+            <h3>
+              基于地区差异的畜牧业碳排放量仿真和预测
+            </h3>
+            <!-- 探索按钮 -->
+            <button class="explore-btn">探索更多</button>
+          </div>
+          <!-- 背景遮罩 -->
+          <div class="backdrop"></div>
+          <!-- 轮播图片 -->
+          <img src="IMG\background2.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- glide 控制按钮 -->
+    <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+        < </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            >
+          </button>
+    </div>
+    <!-- glide 控制圆点 -->
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+      <button class="glide__bullet" data-glide-dir="=0"></button>
+      <button class="glide__bullet" data-glide-dir="=1"></button>
+    </div>
+  </div>
+
+
+  <div class="glide" id="introduction"
+    style="width: 100vw;height: 175vh;background-color: black;text-align: center;padding: 5%;">
+    <div id="problem-title-wrap" class="to-fade-in-fast" style="color: white;text-align: justify;">
+      农业系统约占全球范围温室气体排放总量的30%，其中畜牧业占排放的
+      <span style="color: rgba(213, 59, 72, 1);font-size: 45px;">14.5%</span>
+    </div>
+    <img src="IMG\产量统计.png" alt="产量统计.png" style="width:80%;">
+    <div class="to-fade-in-fast">
+      <p
+        style="text-align: center;color: white;text-align: center;font-size: 2.5rem;font-weight: bold;margin-top: 5rem;">
+        我们结合当地畜牧业特点，构建碳排放量的仿真预测模型
+      </p>
+      <p
+        style="text-align: center;color: white;text-align: center;font-size: 2.5rem;font-weight: bold;margin-top: 1rem;margin-bottom: 5rem;">
+        为制定符合当地畜牧业科学发展实现碳减排的政策提供依据
+      </p>
+    </div>
+    <div id="problem-title-wrap" class="to-fade-in-fast"
+      style="color: white;text-align: justify;width: 80%;line-height: 1.5;">
+      <img src="IMG\sheep.png" alt="sheep.png" style="float:left;width: 20%;margin-right: 5%;">
+      <h2 style="color: rgba(213, 59, 72, 1);font-size:35px;">引言</h2>
+      <p style="color: rgba(213, 59, 72, 1);font-size: 25px;font-weight: normal;margin-top: 2%;">
+        畜牧业作为乡村建设的重要来源，其碳减排是乡村治理和乡村发展的重要基石，通过减少畜牧业生产过程中的温室气体排放应对气候变化，不仅有助于改善乡村地区的环境质量，还能促进畜牧业的可持续发展。畜牧业碳减排对于乡村治理与发展的作用不可估量。
+      </p>
+    </div>
+
+
+    <div class="content-wrapper">
+      <!-- id用来导航菜单跳转 -->
+      <section id="research-status" class="research-status">
+
+        <h2 class="title1">研究现状</h2>
+        <!-- 筛选按钮 -->
+        <div class="filter-btns">
+          <button class="filter-btn active" data-filter="." onclick="showText(1)">
+            研究方法
+          </button>
+          <button class="filter-btn" data-filter="." onclick="showText(2)">
+            研究视角
+          </button>
+          <button class="filter-btn" data-filter="." onclick="showText(3)">
+            研究程度
+          </button>
+        </div>
+
+        <div class="content">
+          <p id="text1" class="to-fade-in-fast"
+            style="display:block;font-size: 30px;text-indent: 2em;font-family: Kaiti;text-align: justify;">
+            主要采用因素分解法，包括结构分解法（SDA）和指数分解法（IDA）。SDA利用投入产出分析来量化碳排放的影响因素，适合分析部门间的交叉影响。IDA则较简单，主要分为拉氏指数分解和迪氏指数分解两种。拉氏指数分解固定基年指标，研究单个因素的影响；而迪氏指数分解，尤其是LMDI，因解决残差和零值问题而在实证研究中广泛应用。
+          </p>
+          <p id="text2" class="to-fade-in-fast"
+            style="display:none;font-size: 30px;text-indent: 2em;font-family: Kaiti;text-align: justify;">
+            集中在能源相关行业，如交通运输业、工业等，以及特定省份的各个行业。这些研究通常采用因素分解和碳排放减排路径设计，为特定地区提供针对性的解决方案。然而，这些研究对畜牧业碳排放的关注不足，较少提供针对该行业的借鉴意义。
+          </p>
+          <p id="text3" class="to-fade-in-fast"
+            style="display:none;font-size: 30px;text-indent: 2em;font-family: Kaiti;text-align: justify;">
+            尽管有研究分析了畜牧业碳排放的时空演进和影响因素，但少有研究对这些影响因素进行仿真预测，以探究不同因素对未来年份碳排放的影响，并设计具体的碳排放路径。
+          </p>
+        </div>
+      </section>
+
+      <section id="project-context" class="project-context">
+
+        <h2 class="title1" style="margin-top: 10vh;">项目背景</h2>
+
+        <div class="content" style="margin-top: 5vh;">
+          <p id="text1" class="to-fade-in-fast"
+            style="display:block;font-size: 30px;text-indent: 2em;font-family: Kaiti;text-align: justify;">
+            20世纪80年代以来，全球温室气体骤升且变暖趋势加快，引起了国际社会的共同关注。随后，《京都议
+            定书》和《巴黎协定》相继签订和实施标志着所有国家均需要承担相应的减排义务。在此背景下，作为全球最大的碳排放国家，也是负责任的大国，中国政府提出了 2030 年实现“碳达峰”和 2060 年实现“碳中和”的宏伟
+            目标。“双碳”目标实现的根本途径在于减排增汇，其中减排是基础。厘清各行业碳排放现状特征显然有助于
+            减排策略的提出。近年来，全球气候变暖对人类造成了巨大的不良影响，其中，温室气体是造成全球变暖的主要原因。对此，减少碳排放量成为国内外共识。
+          </p>
+        </div>
+      </section>
+
+      <section id="purpose" class="purpose">
+
+        <h2 class="title1" style="margin-top: 10vh;">研究目的</h2>
+
+        <div class="content" style="margin-top: 5vh;">
+          <p id="text1" class="to-fade-in-fast"
+            style="display:block;font-size: 30px;text-indent: 2em;font-family: Kaiti;text-align: justify;">
+            20世纪80年代以来，全球温室气体骤升且变暖趋势加快，引起了国际社会的共同关注。随后，《京都议
+            定书》和《巴黎协定》相继签订和实施标志着所有国家均需要承担相应的减排义务。在此背景下，作为全球最大的碳排放国家，也是负责任的大国，中国政府提出了 2030 年实现“碳达峰”和 2060 年实现“碳中和”的宏伟
+            目标。“双碳”目标实现的根本途径在于减排增汇，其中减排是基础。厘清各行业碳排放现状特征显然有助于
+            减排策略的提出。近年来，全球气候变暖对人类造成了巨大的不良影响，其中，温室气体是造成全球变暖的主要原因。对此，减少碳排放量成为国内外共识。
+          </p>
+        </div>
+      </section>
+
+
+      <section id="research-process" class="research-process"></section>
+      <div class="content-wrapper" style="margin-top: 10vh;">
+        <h2 class="title1">研究过程</h2>
+        <!-- 补充说明区域 -->
+        <p class="intro">
+          以下是我们的研究过程...
+        </p>
+        <div style="display: flex;justify-content: center;">
+          <section id="hp-timeline">
+            <ul>
+              <li style="--accent-color: #41516c" class="to-slide-left">
+                <div class="date" style="margin-bottom: 20px;" id="loc1">测算公式</div>
+                <div class="descr">
+                  <a href="HTML/sheet1.html"><img src="IMG\测算公式1.png" alt="测算公式1.png" class="im"></a>
+                  <p style="margin-bottom: 20px;text-align: justify;">
+                    采用《中国畜牧业统计年鉴》、《中国农村统计年鉴》得到各省份各畜禽存栏量与出栏量，计算得到各省份各年份畜牧业碳排放量。
+                  </p>
+                  <button onclick="window.location.href = 'HTML/sheet1.html';"
+                    style="padding: 3px 20px;margin-bottom: 20px;">畜牧业动物出栏量存栏量数据.xlsx</button>
+                </div>
+              </li>
+              <li style="--accent-color: #fbca3e" class="to-slide-right">
+                <div class="date" style="margin-bottom: 20px;">中国碳排放量时序变化</div>
+                <div class="descr">
+                  <img src="IMG\中国碳排放量时序变化2.png" alt="中国碳排放量时序变化2.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: justify;">2010-2021 年中国省畜牧业碳排放总量变化情况</p>
+                </div>
+              </li>
+              <li style="--accent-color: #e24a68" class="to-slide-left">
+                <div class="date" style="margin-bottom: 20px;" id="loc2">2021年中国各省畜牧业碳排放总量对比情况</div>
+                <div class="descr">
+                  <a href="HTML/sheet4.html">
+                    <img src="IMG\2021年中国各省畜牧业碳排放总量对比情况3.png" alt="2021年中国各省畜牧业碳排放总量对比情况3.png" class="im">
+                  </a>
+                  <p style="margin-bottom: 20px;text-align: justify;">
+                    2021 年中国各省畜牧业碳排放总量对比情况
+                  </p>
+                  <button onclick="window.location.href = 'HTML/sheet4.html';"
+                    style="padding: 3px 20px;margin-bottom: 20px;">计算出的碳排放量.xlsx</button>
+                </div>
+              </li>
+              <li style="--accent-color: #1b5f8c" class="to-slide-right">
+                <div class="date" style="margin-bottom: 20px;">碳排放强度计算公式</div>
+                <div class="descr">
+                  <img src="IMG\碳排放强度计算公式4.png" alt="碳排放强度计算公式4.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: justify;">
+                    根据中国政策制定部门对碳排放强度的官方定义，碳排放强度是指单位 GDP 的二氧化碳排放量，依据国家统计局与上述计算相关碳排放量数据得到各省份各年度碳排放强度。
+                  </p>
+                </div>
+              </li>
+              <li style="--accent-color: #4CADAD" class="to-slide-left">
+                <div class="date" style="margin-bottom: 20px;">2010年中国碳排放强度分布图</div>
+                <div class="descr">
+                  <img src="IMG\2010年中国碳排放强度分布图5.png" alt="2010年中国碳排放强度分布图5.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: center;">
+                    2010 年中国畜牧业碳排放强度分布图
+                  </p>
+                </div>
+              </li>
+              <li style="--accent-color: #AE4A74" class="to-slide-right">
+                <div class="date" style="margin-bottom: 20px;">2021年中国碳排放分布图</div>
+                <div class="descr">
+                  <img src="IMG\2021年中国碳排放分布图6.png" alt="2021年中国碳排放分布图6.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: center;">
+                    2021年中国畜牧业碳排放强度分布图
+                  </p>
+                </div>
+              </li>
+              <li style="--accent-color:  #C87452" class="to-slide-left">
+                <div class="date" style="margin-bottom: 20px;" id="loc3">各地区2014-2021年的平均畜牧业碳排放强度</div>
+                <div class="descr">
+                  <a href="HTML/sheet6.html">
+                    <img src="IMG\各地区 2014-2021 年的平均畜牧业碳排放强度手肘图.png" alt="各地区 2014-2021 年的平均畜牧业碳排放强度手肘图.png" class="im" />
+                  </a>
+                  <p style="margin-bottom: 20px;text-align: justify;">
+                    基于手肘图的结果利用K-Means本文将所有省份依据碳排放强度分为三类，确定中国畜牧业碳排放强度划分范围。
+                  </p>
+                  <button onclick="window.location.href = 'HTML/sheet6.html';"
+                    style="padding: 3px 20px;margin-bottom: 20px;">碳排放强度.xlsx</button>
+                </div>
+              </li>
+              <li style="--accent-color: #534173" class="to-slide-right">
+                <div class="date" style="margin-bottom: 20px;" id="loc4">LMDI方法</div>
+                <div class="descr">
+                  <a href="HTML/sheet7.html">
+                    <img src="IMG\LMDI.png" alt="LMDI.png" class="im" />
+                  </a>
+                  <p style="margin-bottom: 20px;text-align: justify;">
+                    C 表示湖北省畜牧业碳排放量，LS 表示畜牧业可比价产值，AGRI 表示农
+                    林牧渔总产值，P 表示乡村人口数量。EI 表示效率因素，CI 表示结构因素，SI 表示经济因素。
+                  </p>
+                  <button onclick="window.location.href = 'HTML/sheet7.html';"
+                    style="padding: 3px 20px;margin-bottom: 20px;">影响因素值.xlsx</button>
+                </div>
+              </li>
+              <li style="--accent-color: #709ED0" class="to-slide-left">
+                <div class="date" style="margin-bottom: 20px;">低强度地区LMDI分解结果</div>
+                <div class="descr">
+                  <img src="IMG\低强度地区LMDI分解结果7.png" alt="低强度地区LMDI分解结果7.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: justify;">
+                    2011-2021 年低碳排放强度地区各影响因素贡献值
+                  </p>
+                </div>
+              </li>
+              <li style="--accent-color: #19CAAD" class="to-slide-right">
+                <div class="date" style="margin-bottom: 20px;">中强度地区LMDI分解结果</div>
+                <div class="descr">
+                  <img src="IMG\中强度地区LMDI分解结果8.png" alt="中强度地区LMDI分解结果8.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: justify;">
+                    2011-2021 年中碳排放强度地区青海和甘肃碳排放量影响因素分解
+                  </p>
+                </div>
+              </li>
+              <li style="--accent-color: #41516c" class="to-slide-left">
+                <div class="date" style="margin-bottom: 20px;">高强度地区LMDI分解结果</div>
+                <div class="descr">
+                  <img src="IMG\高强度地区LMDI分解结果9.png" alt="高强度地区LMDI分解结果9.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: justify;">
+                    2011-2021 年高碳排放强度地区西藏碳排放量影响因素分解
+                  </p>
+                </div>
+              </li>
+              <li style="--accent-color: #fbca3e" class="to-slide-right">
+                <div class="date" style="margin-bottom: 20px;">系统动力学总系统构建</div>
+                <div class="descr">
+                  <img src="IMG\系统动力学总系统构建10.png" alt="系统动力学总系统构建10.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: center;">西藏地区的碳排放因果回路</p>
+                </div>
+              </li>
+              <li style="--accent-color: #e24a68" class="to-slide-left">
+                <div class="date" style="margin-bottom: 20px;">经济子系统</div>
+                <div class="descr">
+                  <img src="IMG\经济子系统11.png" alt="经济子系统11.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: center;">
+                    经济子系统回路图
+                  </p>
+                </div>
+              </li>
+              <li style="--accent-color: #1b5f8c" class="to-slide-right">
+                <div class="date" style="margin-bottom: 20px;">环境子系统</div>
+                <div class="descr">
+                  <img src="IMG\环境子系统12.png" alt="环境子系统12.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: center;">
+                    环境子系统回路图
+                  </p>
+                </div>
+              </li>
+              <li style="--accent-color: #4CADAD" class="to-slide-left">
+                <div class="date" style="margin-bottom: 20px;">社会子系统</div>
+                <div class="descr">
+                  <img src="IMG\社会子系统13.png" alt="社会子系统13.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: center;">
+                    社会子系统回路图
+                  </p>
+                </div>
+              </li>
+              <li style="--accent-color: #AE4A74" class="to-slide-right">
+                <div class="date" style="margin-bottom: 20px;">健康意识减排效果</div>
+                <div class="descr">
+                  <img src="IMG\健康意识减排效果14.png" alt="健康意识减排效果14.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: center;">
+                    提升健康意识对碳排放量影响图
+                  </p>
+                </div>
+              </li>
+              <li style="--accent-color: #709ED0" class="to-slide-left">
+                <div class="date" style="margin-bottom: 20px;">膳食结构减排效果</div>
+                <div class="descr">
+                  <img src="IMG\膳食结构减排效果15.png" alt="膳食结构减排效果15.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: center;">
+                    改善饮食结构对碳排放量影响图
+                  </p>
+                </div>
+              </li>
+              <li style="--accent-color: #19CAAD" class="to-slide-right">
+                <div class="date" style="margin-bottom: 20px;">环保投入减排效果</div>
+                <div class="descr">
+                  <img src="IMG\环保投入减排效果16.png" alt="环保投入减排效果16.png" class="im" />
+                  <p style="margin-bottom: 20px;text-align: center;">
+                    改善环保投入对碳排放量影响图
+                  </p>
+                </div>
+              </li>
+            </ul>
+        </div>
+
+
+
+        <section id="value" class="value">
+          <h2 class="title1">实际价值</h2>
+          <p class="intro" style="text-indent: 2em;">
+            促进经济可持续发展，提高资源利用效率，增加农民收入，提升乡村经济实力，促进社会和谐，执行国家环保政策，展现国际责任感，从而推动乡村经济、社会、环境的协调发展，提升乡村居民的生活质量和幸福感。
+          </p>
+          <div class="services">
+            <div class="service-item">
+              <i class="fas fa-comments"></i>
+              <h2 class="service-title">提升乡村经济实力</h2>
+              <p class="service-content">
+                Enhance rural economic strength
+              </p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-gavel"></i>
+              <h2 class="service-title">提高资源利用效率</h2>
+              <p class="service-content">
+                Improve the efficiency of resource utilization
+              </p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-file-signature"></i>
+              <h2 class="service-title">执行国家环保政策</h2>
+              <p class="service-content">
+                Implement national environmental protection policies
+              </p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-user"></i>
+              <h2 class="service-title">促进经济发展</h2>
+              <p class="service-content">
+                Boost the economic development
+              </p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <h2 class="service-title">促进社会和谐</h2>
+              <p class="service-content">
+                Promote social harmony
+              </p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-user-check"></i>
+              <h2 class="service-title">增加农民收入</h2>
+              <p class="service-content">
+                Increasing the farmers income
+              </p>
+            </div>
+          </div>
+
+          <section id="policy-suggestion" class="policy-suggestion">
+
+            <h2 class="title1" style="margin-top: 10vh;">政策建议</h2>
+            <div style="margin-top: 5vh;">
+              <ol class="border">
+                <li>
+                  中国畜牧业碳排放强度在研究期间累计减少碳排放9925.68万吨，其中效率因素在抑制因素中贡献最大，尤其近几年抑制作用愈加明显，这为中国畜牧业节能减排提供了新的方向。</li>
+                <li style="font-size: 20px;font-family: Microsoft Yahei;">
+                  中国畜牧业碳排放强度呈现出时间和空间差异性，可分为低、中、高碳排放强度三类地区，政策的制定应该具有个性化，按照不同地区的不同特点进行精准定制。</li>
+                <li style="font-size: 20px;font-family: Microsoft Yahei;">
+                  通过对典型省份畜牧业西藏地区碳排放量影响因素进行分析，其中结构因素起明显负向作用，通过计算机仿真改善饮食结构和健康意识，我们发现积极的健康意识，合理的饮食结构，能较大程度抑制碳排放量，这为中国畜牧业节能减排提供了新思路。
+                </li>
+                <li style="font-size: 20px;font-family: Microsoft Yahei;">
+                  通过对典型省份西藏地区畜牧业碳排放量进行分析，环保投入并不如预设中对畜牧业碳排放起改善作用，猜想可能是环保投入的分配不合理，建议侧重对饲料营养成分的调节，针对CH4等关键因子进行政策调整。</li>
+                <li style="font-size: 20px;font-family: Microsoft Yahei;">
+                  通过对典型省份西藏地区畜牧业碳排放量进行分析，发现健康意识、膳食结构两个主要影响因子对西藏地区碳排放量起显著减排效果，建议按照健康膳食结构的食肉量进行调整，可有效减少畜牧业的碳排放量。</li>
+              </ol>
+              </p>
+            </div>
+          </section>
+
+          <!-- 底部信息 -->
+          <footer>
+            <!-- 返回顶部按钮 -->
+            <div class="scrollToTop">
+              <a href="#home"><i class="fas fa-chevron-up"></i></a>
+            </div>
+      </div>
+      </footer>
+      <script src="JS\scrollreveal.min.js"></script>
+      <!-- 轮播插件 -->
+      <script src="JS\glide.min.js"></script>
+      <!-- 案例筛选组件  -->
+      <script src="JS\isotope.pkgd.min.js"></script>
+      <!-- 动画组件 -->
+      <script src="JS\anime.min.js"></script>
+      <!-- 流畅滑动组件 -->
+      <script src="JS\smooth-scroll.polyfills.min.js"></script>
+      <!-- 自定义JS文件 -->
+      <script src="JS\index.js"></script>
+</body>
+
+</html>
