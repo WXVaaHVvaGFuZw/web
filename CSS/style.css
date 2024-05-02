@@ -1241,10 +1241,33 @@ footer {
 }
 
 
-
-
-
 .fade-in {
   opacity: 1;
   /* transform: translateY(0); */
+}
+
+
+/* Style for select dropdown */
+#searchSelect {
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-right: 10px; 
+}
+
+.search-button{
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search-button:hover {
+  background-color: #0056b3;
 }

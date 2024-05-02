@@ -544,3 +544,9 @@ function showText(buttonNumber) {
   // 给点击的按钮添加红色样式
   buttons[index].classList.add('red');
 }
+
+
+function search() {
+  var selectedOption = document.getElementById("searchSelect").value;
+  window.location.href = "HTML/sheet-search.html?option=" + selectedOption;
+}

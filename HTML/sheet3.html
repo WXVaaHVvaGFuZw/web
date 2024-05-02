@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excel Data</title>
-    <link rel="icon" href="R-C.jfif" type="image/x-icon">
+    <link rel="icon" href="..\IMG\R-C.png" type="image/x-icon">
     <style>
         body {
             margin-left: 10px;
@@ -71,6 +71,10 @@
             border: 1px solid black;
             padding: 8px;
             height: 20px;
+        }
+
+        .highlight {
+            background-color: #ffcccc;
         }
     </style>
 </head>
@@ -7657,6 +7661,58 @@
 </body>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const option = urlParams.get('option');
+        searchTable(option);
+    });
+
+    function searchTable(option) {
+        var filter = option.toUpperCase();
+        var totalResults = 0;
+        var resultsPerSheet = [];
+
+        for (let i = 1; i <= 7; i++) {
+            let sheet = document.getElementById('sheet' + i);
+            let table = sheet.querySelector("table");
+            let tr = table.getElementsByTagName("tr");
+            let count = 0;
+
+            for (let j = 0; j < tr.length; j++) {
+                tr[j].classList.remove("highlight");
+                let td = tr[j].getElementsByTagName("td")[0];
+                if (td) {
+                    let txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase() === filter) {
+                        tr[j].classList.add("highlight");
+                        count++;
+                    }
+                }
+            }
+
+            resultsPerSheet.push(count);
+            document.getElementById('result' + i).innerText = count;
+            totalResults += count;
+        }
+
+        document.getElementById("resultCount").innerText = totalResults;
+    }
+
+    function jumpTo() {
+        var jumpToIndex = parseInt(document.getElementById("jumpToResult").value);
+        var highlighted = document.querySelectorAll(".highlight");
+        if (jumpToIndex >= 1 && jumpToIndex <= highlighted.length) {
+            for (var i = 0; i < highlighted.length; i++) {
+                if (i === jumpToIndex - 1) {
+                    highlighted[i].classList.add("current");
+                    highlighted[i].scrollIntoView({ behavior: "smooth", block: "center" });
+                } else {
+                    highlighted[i].classList.remove("current");
+                }
+            }
+        }
+    }
+
     function showTable(sheet) {
         var containers = document.querySelectorAll('.table-container');
         var tabs = document.querySelectorAll('.sheet-bar button');

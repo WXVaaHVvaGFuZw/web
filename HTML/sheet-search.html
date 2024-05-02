@@ -76,12 +76,95 @@
         .highlight {
             background-color: #ffcccc;
         }
+
+        .fixed-div {
+            position: fixed;
+            padding: 15px;
+            padding-top: 0;
+            top: 5px;
+            right: 10px;
+            width: 16%;
+            height: 80px;
+            background-color: rgb(240, 240, 240);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            z-index: 999;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+        }
+
+        .fixed-div.minimized {
+            width: 30px;
+            height: 30px;
+            top: calc(100% - 0px);
+            left: calc(100% - 80px);
+        }
+
+        .toggle-container {
+    position: relative;
+}
+
+.toggle-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+
+        .toggle-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        .button {
+            background-color: rgb(250, 250, 250);
+            border: 2px solid #0678d5;
+            /* 设置蓝色边框 */
+            border-width: 1px;
+            font-size: 16px;
+            /* 设置字体大小 */
+            cursor: pointer;
+            /* 设置鼠标悬停样式 */
+            border-radius: 3px;
+            /* 设置圆角边框 */
+        }
+
+        .button:hover {
+            background-color: rgb(221, 239, 255);
+            /* 设置悬停时的背景颜色 */
+            border-color: #1976D2;
+            /* 设置悬停时的边框颜色 */
+        }
     </style>
 </head>
 
 <body>
+    <button class="toggle-btn" draggable="true">+</button>
+
     <div id="sheet1" class="table-container active" style="width: 1870px;">
         <h2>畜牧业动物出栏量存栏量数据.xlsx</h2>
+        <div class="fixed-div">
+            <p style="line-height: 2;">共找到 <span class="result-count" id="result1">0</span>个结果
+                <button onclick="next()" class="button" style="margin-left: 50px;width: 70px;">下一个</button>
+                <label for="jumpToResult" style="margin-top: 0;">跳转到第</label>
+                <input type="number" id="jumpToResult" min="1" value="1" style="width: 90px;">
+                <button onclick="jumpTo()" class="button" style="margin-left: 6px;width: 60px;">跳转</button>
+            </p>
+        </div>
+        
+
         <table>
             <tr>
                 <td>省份</td>
@@ -2326,6 +2409,15 @@
 
     <div id="sheet2" class="table-container" style="width: 1795px;">
         <h2>各省畜牧业GDP.xlsx</h2>
+        <div class="fixed-div">
+            <p style="line-height: 2;">共找到 <span class="result-count" id="result2">0</span>个结果
+                <button onclick="next()" class="button" style="margin-left: 50px;width: 70px;">下一个</button>
+                <label for="jumpToResult" style="margin-top: 0;">跳转到第</label>
+                <input type="number" id="jumpToResult" min="1" value="1" style="width: 90px;">
+                <button onclick="jumpTo()" class="button" style="margin-left: 6px;width: 60px;">跳转</button>
+            </p>
+        </div>
+
         <table>
             <tr>
                 <td>省份/畜牧业实际GDP（亿元）</td>
@@ -2827,6 +2919,15 @@
 
     <div id="sheet3" class="table-container" style="width: 3330px;">
         <h2>各因素贡献值.xlsx</h2>
+        <div class="fixed-div">
+            <p style="line-height: 2;">共找到 <span class="result-count" id="result3">0</span>个结果
+                <button onclick="next()" class="button" style="margin-left: 50px;width: 70px;">下一个</button>
+                <label for="jumpToResult" style="margin-top: 0;">跳转到第</label>
+                <input type="number" id="jumpToResult" min="1" value="1" style="width: 90px;">
+                <button onclick="jumpTo()" class="button" style="margin-left: 6px;width: 60px;">跳转</button>
+            </p>
+        </div>
+
         <table>
             <tr>
                 <td>省份/EI贡献值</td>
@@ -4681,6 +4782,15 @@
 
     <div id="sheet4" class="table-container" style="width: 1740px;">
         <h2>计算出的碳排放量.xlsx</h2>
+        <div class="fixed-div">
+            <p style="line-height: 2;">共找到 <span class="result-count" id="result4">0</span>个结果
+                <button onclick="next()" class="button" style="margin-left: 50px;width: 70px;">下一个</button>
+                <label for="jumpToResult" style="margin-top: 0;">跳转到第</label>
+                <input type="number" id="jumpToResult" min="1" value="1" style="width: 90px;">
+                <button onclick="jumpTo()" class="button" style="margin-left: 6px;width: 60px;">跳转</button>
+            </p>
+        </div>
+
         <table>
             <tr>
                 <td>省份/碳排放量（万吨）</td>
@@ -5167,6 +5277,15 @@
 
     <div id="sheet5" class="table-container" style="width: 1000px;">
         <h2>聚类结果.xlsx</h2>
+        <div class="fixed-div">
+            <p style="line-height: 2;">共找到 <span class="result-count" id="result5">0</span>个结果
+                <button onclick="next()" class="button" style="margin-left: 50px;width: 70px;">下一个</button>
+                <label for="jumpToResult" style="margin-top: 0;">跳转到第</label>
+                <input type="number" id="jumpToResult" min="1" value="1" style="width: 90px;">
+                <button onclick="jumpTo()" class="button" style="margin-left: 6px;width: 60px;">跳转</button>
+            </p>
+        </div>
+
         <table>
             <tr>
                 <td>省份/碳排放强度（吨/万元）</td>
@@ -5301,6 +5420,15 @@
 
     <div id="sheet6" class="table-container" style="width: 1785px;">
         <h2>碳排放强度.xlsx</h2>
+        <div class="fixed-div">
+            <p style="line-height: 2;">共找到 <span class="result-count" id="result6">0</span>个结果
+                <button onclick="next()" class="button" style="margin-left: 50px;width: 70px;">下一个</button>
+                <label for="jumpToResult" style="margin-top: 0;">跳转到第</label>
+                <input type="number" id="jumpToResult" min="1" value="1" style="width: 90px;">
+                <button onclick="jumpTo()" class="button" style="margin-left: 6px;width: 60px;">跳转</button>
+            </p>
+        </div>
+
         <table>
             <tr>
                 <td>省份/碳排放强度（吨/万元）</td>
@@ -5787,6 +5915,15 @@
 
     <div id="sheet7" class="table-container" style="width: 3405px;">
         <h2>影响因素值.xlsx</h2>
+        <div class="fixed-div">
+            <p style="line-height: 2;">共找到 <span class="result-count" id="result7">0</span>个结果
+                <button onclick="next()" class="button" style="margin-left: 50px;width: 70px;">下一个</button>
+                <label for="jumpToResult" style="margin-top: 0;">跳转到第</label>
+                <input type="number" id="jumpToResult" min="1" value="1" style="width: 90px;">
+                <button onclick="jumpTo()" class="button" style="margin-left: 6px;width: 60px;">跳转</button>
+            </p>
+        </div>
+
         <table>
             <tr>
                 <td>省份/CI（亿元/亿元）</td>
@@ -7648,19 +7785,39 @@
     </div>
 
     <div class="sheet-bar">
-        <button onclick="showTable('sheet1')" data-sheet="sheet1">Sheet 1</button>
+        <button onclick="showTable('sheet1')" class="active" data-sheet="sheet1">Sheet 1</button>
         <button onclick="showTable('sheet2')" data-sheet="sheet2">Sheet 2</button>
         <button onclick="showTable('sheet3')" data-sheet="sheet3">Sheet 3</button>
         <button onclick="showTable('sheet4')" data-sheet="sheet4">Sheet 4</button>
         <button onclick="showTable('sheet5')" data-sheet="sheet5">Sheet 5</button>
         <button onclick="showTable('sheet6')" data-sheet="sheet6">Sheet 6</button>
-        <button onclick="showTable('sheet7')" class="active" data-sheet="sheet7">Sheet 7</button>
-        <button onclick="location.href='../index.html#loc4'"
+        <button onclick="showTable('sheet7')" data-sheet="sheet7">Sheet 7</button>
+        <button onclick="location.href='../index.html#research-process'"
             style="padding: 0px;padding-left: 10px;position: fixed;right:10px;color: blue;">返回</button>
     </div>
 </body>
 
 <script>
+    function showTable(sheet) {
+        var containers = document.querySelectorAll('.table-container');
+        var tabs = document.querySelectorAll('.sheet-bar button');
+
+        // 隐藏所有表格
+        containers.forEach(container => container.classList.remove('active'));
+
+        // 移除所有标签的活动状态
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        // 显示选择的表格
+        document.getElementById(sheet).classList.add('active');
+
+        // 设置激活的标签
+        document.querySelector('.sheet-bar button[data-sheet="' + sheet + '"]').classList.add('active');
+    }
+
+
+
+    
     document.addEventListener('DOMContentLoaded', function () {
         const urlParams = new URLSearchParams(window.location.search);
         const option = urlParams.get('option');
@@ -7730,22 +7887,61 @@
         }
     }
 
-    function showTable(sheet) {
-        var containers = document.querySelectorAll('.table-container');
-        var tabs = document.querySelectorAll('.sheet-bar button');
 
-        // 隐藏所有表格
-        containers.forEach(container => container.classList.remove('active'));
+    document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtns = document.querySelectorAll('.toggle-btn');
+    
+    toggleBtns.forEach(function(toggleBtn) {
+        toggleBtn.addEventListener('click', function () {
+            const fixedDivs = document.querySelectorAll('.fixed-div');
+            
+            fixedDivs.forEach(function(fixedDiv) {
+                if (fixedDiv.classList.contains('minimized')) {
+                    fixedDiv.classList.remove('minimized');
+                } else {
+                    fixedDiv.classList.add('minimized');
+                }
+            });
+        });
+    });
+});
 
-        // 移除所有标签的活动状态
-        tabs.forEach(tab => tab.classList.remove('active'));
 
-        // 显示选择的表格
-        document.getElementById(sheet).classList.add('active');
 
-        // 设置激活的标签
-        document.querySelector('.sheet-bar button[data-sheet="' + sheet + '"]').classList.add('active');
-    }
+const toggleBtn = document.querySelector('.toggle-btn');
+
+let isDragging = false;
+let startX, startY, startLeft, startTop;
+
+toggleBtn.addEventListener('mousedown', (e) => {
+    if (e.button !== 0) return; // Check if left mouse button is pressed
+    isDragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    startLeft = toggleBtn.offsetLeft;
+    startTop = toggleBtn.offsetTop;
+    e.preventDefault(); // Prevent default browser behavior
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const offsetX = e.clientX - startX;
+    const offsetY = e.clientY - startY;
+    const maxX = document.documentElement.clientWidth - toggleBtn.offsetWidth - 20;
+    const maxY = document.documentElement.clientHeight - toggleBtn.offsetHeight - 30; // Adjusted for bottom margin
+    let newLeft = startLeft + offsetX;
+    let newTop = startTop + offsetY;
+    // Ensure the button does not exceed the maximum drag distance from the page edges
+    newLeft = Math.max(10, Math.min(maxX, newLeft));
+    newTop = Math.max(10, Math.min(maxY, newTop));
+    toggleBtn.style.left = newLeft + 'px';
+    toggleBtn.style.top = newTop + 'px';
+});
+
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+});
+
 </script>
 
 </html>
