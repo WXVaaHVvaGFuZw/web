@@ -16,8 +16,10 @@
 <body>
   <!-- 头部 -->
   <header class="open">
-    <div class="logo">
+    <div class="logo"></div>
       
+    <div class="loader-container" id="loaderContainer">
+      <div class="loader"></div>
     </div>
     <!-- 导航 -->
     <nav>
@@ -29,7 +31,7 @@
       <a href="#research-results">研究结果</a>
       <a href="#value">实际价值</a>
       <a href="#policy-suggestion">政策建议</a>
-      <a href="HTML/sheet.html">数据</a>
+      <a href="HTML/sheet.html" onclick="showLoader()">数据</a>
     </nav>
     <!-- 折叠导航按钮 -->
     <div class="burger">

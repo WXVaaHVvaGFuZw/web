@@ -66,7 +66,6 @@
 
         th,
         td {
-
             text-align: center;
             border: 1px solid black;
             padding: 8px;
@@ -101,26 +100,26 @@
         }
 
         .toggle-container {
-    position: relative;
-}
+            position: relative;
+        }
 
-.toggle-btn {
-    position: fixed;
-    bottom: 40px;
-    right: 10px;
-    width: 35px;
-    height: 35px;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 50%;
-    font-size: 24px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s, transform 0.3s;
-    z-index: 1000;
-}
+        .toggle-btn {
+            position: fixed;
+            bottom: 40px;
+            right: 10px;
+            width: 35px;
+            height: 35px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1000;
+        }
 
 
         .toggle-btn:hover {
@@ -163,7 +162,7 @@
                 <button onclick="jumpTo()" class="button" style="margin-left: 6px;width: 60px;">跳转</button>
             </p>
         </div>
-        
+
 
         <table>
             <tr>
@@ -7817,7 +7816,7 @@
 
 
 
-    
+
     document.addEventListener('DOMContentLoaded', function () {
         const urlParams = new URLSearchParams(window.location.search);
         const option = urlParams.get('option');
@@ -7889,58 +7888,58 @@
 
 
     document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtns = document.querySelectorAll('.toggle-btn');
-    
-    toggleBtns.forEach(function(toggleBtn) {
-        toggleBtn.addEventListener('click', function () {
-            const fixedDivs = document.querySelectorAll('.fixed-div');
-            
-            fixedDivs.forEach(function(fixedDiv) {
-                if (fixedDiv.classList.contains('minimized')) {
-                    fixedDiv.classList.remove('minimized');
-                } else {
-                    fixedDiv.classList.add('minimized');
-                }
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
+
+        toggleBtns.forEach(function (toggleBtn) {
+            toggleBtn.addEventListener('click', function () {
+                const fixedDivs = document.querySelectorAll('.fixed-div');
+
+                fixedDivs.forEach(function (fixedDiv) {
+                    if (fixedDiv.classList.contains('minimized')) {
+                        fixedDiv.classList.remove('minimized');
+                    } else {
+                        fixedDiv.classList.add('minimized');
+                    }
+                });
             });
         });
     });
-});
 
 
 
-const toggleBtn = document.querySelector('.toggle-btn');
+    const toggleBtn = document.querySelector('.toggle-btn');
 
-let isDragging = false;
-let startX, startY, startLeft, startTop;
+    let isDragging = false;
+    let startX, startY, startLeft, startTop;
 
-toggleBtn.addEventListener('mousedown', (e) => {
-    if (e.button !== 0) return; // Check if left mouse button is pressed
-    isDragging = true;
-    startX = e.clientX;
-    startY = e.clientY;
-    startLeft = toggleBtn.offsetLeft;
-    startTop = toggleBtn.offsetTop;
-    e.preventDefault(); // Prevent default browser behavior
-});
+    toggleBtn.addEventListener('mousedown', (e) => {
+        if (e.button !== 0) return; // Check if left mouse button is pressed
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        startLeft = toggleBtn.offsetLeft;
+        startTop = toggleBtn.offsetTop;
+        e.preventDefault(); // Prevent default browser behavior
+    });
 
-document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const offsetX = e.clientX - startX;
-    const offsetY = e.clientY - startY;
-    const maxX = document.documentElement.clientWidth - toggleBtn.offsetWidth - 20;
-    const maxY = document.documentElement.clientHeight - toggleBtn.offsetHeight - 30; // Adjusted for bottom margin
-    let newLeft = startLeft + offsetX;
-    let newTop = startTop + offsetY;
-    // Ensure the button does not exceed the maximum drag distance from the page edges
-    newLeft = Math.max(10, Math.min(maxX, newLeft));
-    newTop = Math.max(10, Math.min(maxY, newTop));
-    toggleBtn.style.left = newLeft + 'px';
-    toggleBtn.style.top = newTop + 'px';
-});
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const offsetX = e.clientX - startX;
+        const offsetY = e.clientY - startY;
+        const maxX = document.documentElement.clientWidth - toggleBtn.offsetWidth - 20;
+        const maxY = document.documentElement.clientHeight - toggleBtn.offsetHeight - 30; // Adjusted for bottom margin
+        let newLeft = startLeft + offsetX;
+        let newTop = startTop + offsetY;
+        // Ensure the button does not exceed the maximum drag distance from the page edges
+        newLeft = Math.max(10, Math.min(maxX, newLeft));
+        newTop = Math.max(10, Math.min(maxY, newTop));
+        toggleBtn.style.left = newLeft + 'px';
+        toggleBtn.style.top = newTop + 'px';
+    });
 
-document.addEventListener('mouseup', () => {
-    isDragging = false;
-});
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
 
 </script>
 

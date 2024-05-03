@@ -550,3 +550,16 @@ function search() {
   var selectedOption = document.getElementById("searchSelect").value;
   window.location.href = "HTML/sheet-search.html?option=" + selectedOption;
 }
+
+function showLoader() {
+  // 显示加载效果
+  document.getElementById("loaderContainer").style.display = "block";
+}
+
+// 当页面加载完成后隐藏加载效果并显示内容
+window.addEventListener("load", function() {
+  // 隐藏加载效果
+  document.getElementById("loaderContainer").style.display = "none";
+  // 显示内容
+  document.getElementById("content").style.display = "block";
+});
